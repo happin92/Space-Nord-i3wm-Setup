@@ -12,6 +12,14 @@ My clean 2K setup based on CachyOS. Focused on minimalism and Nord color palette
 * **Terminal**: `kitty`
 * **Launcher**: `rofi`
 
+[!WARNING]
+ Before copying, back up your existing configs!
+ ```bash
+ mkdir .config_backup
+
+ cp -r ~/.config ~/.config_backup
+ ```
+
 ## Required Packages
 To make this rice work, you need to install these dependencies:
 
@@ -52,7 +60,7 @@ To make this rice work, you need to install these dependencies:
 
    cd Space-Nord-i3wm-Setup
 
-   cp -rv .config/* ~/.config/
+   cp -rv config/* ~/.config/
 
    chmod +x ~/.config/rofi/powermenu.sh
 
