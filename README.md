@@ -2,6 +2,8 @@
 
 My clean 2K setup based on CachyOS. Focused on minimalism and Nord color palette.
 
+![Preview](https://th.wallhaven.cc/lg/5y/5ygkk9.jpg)
+
 ## Core Components
 * **OS**: [CachyOS]
 * **WM**: `i3-wm`
@@ -37,7 +39,7 @@ To make this rice work, you need to install these dependencies:
 * `cmatrix`
 * `pipes.sh`
 
-## 🚀 Installation
+## Installation
 1. Install the packages above:
    ```bash
 
