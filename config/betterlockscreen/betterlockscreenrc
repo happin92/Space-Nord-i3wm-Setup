@@ -1,0 +1,23 @@
+# Цветовая гамма (под твой розовый акцент и Gruvbox)
+background="#282828"
+foreground="#ebdbb2"
+color1="#d3869b"
+color2="#b8bb26"
+
+# Настройки текста (macOS стиль: крупные часы, тонкий шрифт)
+# Убедись, что у тебя установлен шрифт (например, 'Inter' или 'Roboto')
+font="Inter"
+logintext="Введите пароль"
+font_size=24
+clock_size=82
+content_center=true
+
+# Цвета индикатора ввода (кружка)
+ringcolor="#d3869b"
+insidewrongcolor="#fb4934"
+keyhlcolor="#b8bb26"
+bshlcolor="#fe8019"
+
+# Эффекты
+blur=1.0
+dim=0.2

@@ -1,0 +1,86 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+        "source": "cachyos_small",
+        "color": {
+            "1": "light_blue" // Делает логотип CachyOS розовым
+        },
+        "padding": {
+            "top": 1,
+            "left": 2
+        }
+    },
+    "display": {
+        "separator": " • ",
+        "color": "light_blue" // Делает разделитель розовым
+    },
+    "modules": [
+        {
+            "type": "title",
+            "color": {
+                "user": "light_blue", // Твое имя пользователя
+                "at": "37",   // Собачка @ (белая для контраста)
+                "host": "light_blue"  // Имя хоста
+            }
+        },
+        "break",
+        {
+            "type": "os",
+            "key": "distro",
+            "keyColor": "light_blue",
+            "format": "cachy os"
+        },
+        {
+            "type": "kernel",
+            "key": "kernel",
+            "keyColor": "light_blue",
+            "format": "linux 6.18"
+        },
+        {
+            "type": "packages",
+            "key": "pacman",
+            "keyColor": "light_blue",
+            "format": "{1}"
+        },
+        {
+            "type": "wm",
+            "key": "wm",
+            "keyColor": "light_blue",
+            "format": "{1}"
+        },
+        {
+            "type": "terminal",
+            "key": "terminal",
+            "keyColor": "light_blue",
+            "format": "{1}"
+        },
+        {
+            "type": "shell",
+            "key": "shell",
+            "keyColor": "light_blue",
+            "format": "{1}"
+        },
+        {
+            "type": "uptime",
+            "key": "uptime",
+            "keyColor": "light_blue"
+        },
+        {
+            "type": "de",
+            "key": "de",
+            "keyColor": "light_blue",
+            "format": "kde plasma"
+        },
+        {
+            "type": "memory",
+            "key": "ram",
+            "keyColor": "light_blue",
+            "format": "{1} / {2}" 
+        },
+        "break",
+        {
+            "type": "colors",
+            "symbol": "circle" // Добавит цветные кружочки внизу для красоты
+        }
+    ]
+}

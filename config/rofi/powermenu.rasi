@@ -1,0 +1,56 @@
+configuration {
+    show-icons: false;
+}
+
+* {
+    /* Твоя палитра Nord/Dark */
+    background: #1e222a;
+    background-alt: #282c34;
+    foreground: #d8dee9;
+    selected: #5e81ac; /* Твой акцентный синий */
+}
+
+window {
+    transparency: "real";
+    background-color: @background;
+    text-color: @foreground;
+    fullscreen: true;
+}
+
+mainbox {
+    background-color: transparent;
+    children: [ listview ];
+    padding: 35% 10%; /* Центрируем кнопки на 2K экране */
+}
+
+listview {
+    background-color: transparent;
+    columns: 4;
+    lines: 1;
+    spacing: 2%;
+    cycle: true;
+    dynamic: true;
+    layout: vertical;
+}
+
+element {
+    background-color: @background-alt;
+    text-color: @foreground;
+    orientation: vertical;
+    border-radius: 12px;
+    padding: 40px 0px;
+}
+
+element selected {
+    background-color: @selected;
+    text-color: @background;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    font: "JetBrainsMono Nerd Font 32"; /* Крупные иконки */
+    expand: true;
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+}

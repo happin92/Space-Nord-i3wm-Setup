@@ -1,0 +1,78 @@
+# --- Основные настройки ---
+set $mod Mod4
+font pango:Inter Regular 10
+floating_modifier $mod
+
+# --- Интерфейс (Gaps) ---
+# На CachyOS (Arch) этот синтаксис должен работать:
+for_window [class=".*"] border pixel 3
+gaps inner 12
+gaps outer 3
+# smart_borders yes
+
+default_border pixel 3
+default_floating_border pixel 3
+
+# --- АВТОЗАПУСК ---
+exec_always --no-startup-id "sleep 1 && xrandr --output DP-2 --mode 2560x1440 --rate 239.77 --primary"
+exec --no-startup-id nm-applet
+exec_always --no-startup-id setxkbmap -layout us,ru -option grp:win_space_toggle
+exec_always --no-startup-id picom -b
+exec_always --no-startup-id feh --bg-fill /home/happiness/_.jpeg
+exec --no-startup-id greenclip daemon
+exec --no-startup-id nm-applet
+exec_always --no-startup-id autotiling
+exec --always xss-lock -- betterlockscreen -l blur
+
+# Правильный запуск Polybar (чтобы не дублировался)
+exec_always --no-startup-id polybar; polybar main &
+
+# --- ГОРЯЧИЕ КЛАВИШИ ---
+bindsym $mod+q exec kitty
+bindsym $mod+c kill
+bindsym $mod+m exit
+bindsym $mod+e exec thunar
+bindsym $mod+v floating toggle
+bindsym $mod+r exec rofi -show drun
+bindsym $mod+b exec google-chrome-stable
+
+# Вызов истории буфера через rofi
+bindsym $mod+n exec --no-startup-id rofi -modi "clipboard:greenclip print" -show clipboard -theme ~/.config/rofi/config.rasi
+
+# Скриншоты как в Windows/Hyprland (Win + Shift + S)
+bindsym $mod+Shift+s exec flameshot gui
+
+# Разделение окон
+bindsym $mod+p layout toggle split
+bindsym $mod+j split v
+
+# --- НАВИГАЦИЯ ---
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# Рабочие столы
+bindsym $mod+1 workspace number 1
+bindsym $mod+2 workspace number 2
+bindsym $mod+3 workspace number 3
+bindsym $mod+4 workspace number 4
+
+# --- Правила окон ---
+for_window [class="nekoray"] floating enable
+for_window [class="pavucontrol"] floating enable
+for_window [class="ayugram desktop"] floating enable
+
+# Цветовая схема для окон
+# class                 border  bground text    indicator child_border
+client.focused          #5e81ac #5e81ac #ffffff #81a1c1   #5e81ac
+client.focused_inactive #4c566a #4c566a #d8dee9 #4c566a   #4c566a
+client.unfocused        #3b4252 #3b4252 #999999 #3b4252   #3b4252
+
+# Убираем рамки у заголовков, оставляем только тонкую линию вокруг
+for_window [class=".*"] border pixel 2
