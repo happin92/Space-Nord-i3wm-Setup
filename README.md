@@ -12,7 +12,7 @@ My clean 2K setup based on CachyOS. Focused on minimalism and Nord color palette
 * **Terminal**: `kitty`
 * **Launcher**: `rofi`
 
-[!WARNING]
+[WARNING]
  Before copying, back up your existing configs!
  ```bash
  mkdir .config_backup
@@ -49,22 +49,22 @@ To make this rice work, you need to install these dependencies:
 
 ## Installation
 1. Install the packages above:
-   ```bash
+```bash
 
-   sudo pacman -S git polybar picom kitty rofi feh betterlockscreen python-pywal ttf-jetbrains-mono-nerd ttf-iosevka-nerd otf-font-awesome awesome-terminal-fonts autotiling pavucontrol network-manager-applet flameshot rofi-greenclip cava fastfetch cmatrix pipes.sh
-
+sudo pacman -S git polybar picom kitty rofi feh betterlockscreen python-pywal ttf-jetbrains-mono-nerd ttf-iosevka-nerd otf-font-awesome awesome-terminal-fonts autotiling pavucontrol network-manager-applet flameshot rofi-greenclip cava fastfetch cmatrix pipes.sh
+```
 2. Copy the contents of this repo to ~/.config/
-   ```bash
+```bash
 
-   git clone https://github.com/happin92/Space-Nord-i3wm-Setup
+git clone https://github.com/happin92/Space-Nord-i3wm-Setup
 
-   cd Space-Nord-i3wm-Setup
+cd Space-Nord-i3wm-Setup
 
-   cp -rv config/* ~/.config/
+cp -rv config/* ~/.config/
 
-   chmod +x ~/.config/rofi/powermenu.sh
-
+chmod +x ~/.config/rofi/powermenu.sh
+```
 3. Reload your i3
-   ```bash
-
-   i3-msg reload
+```bash
+i3-msg reload
+```
