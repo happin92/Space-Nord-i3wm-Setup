@@ -2,7 +2,7 @@
 
 My clean 2K setup based on CachyOS. Focused on minimalism and Nord color palette.
 
-![Preview](workspace)
+![Preview](workspace.png)
 
 ## Core Components
 * **OS**: [CachyOS]
